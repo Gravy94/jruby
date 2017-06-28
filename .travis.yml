@@ -90,14 +90,10 @@ install: tool/travis-install.sh
 script: tool/travis-script.sh
 
 notifications:
-  irc:
-    channels:
-      - "irc.freenode.org#jruby"
-    on_success: change
-    on_failure: always
-    template:
-      - "%{repository} (%{branch}:%{commit} by %{author}): %{message} (%{build_url})"
-    skip_join: true
+  slack: 
+    myown-org:yZs0ajxa6gd7FujkoSV1tOum 
+  on:
+branch: master
 
 # we are on a branch
     on_success: always
